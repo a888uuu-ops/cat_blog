@@ -1,0 +1,11 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+
+{% block content %}
+{% for cat in cats %}
+<div class="cat-entry">
+    <h2><a href="{{ cat.get_absolute_url }}">{{ cat.title }}</a></h2>
+    <p>{{ cat.body }}</p>
+</div>
+{% endfor %}
+{% endblock content %}
